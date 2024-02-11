@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    
+--light-cyan: hsl(193, 38%, 86%);
+--neon-green: hsl(150, 100%, 66%);
+
+--gray-blue: hsl(217, 19%, 38%);
+--dark-gray-blue: hsl(217, 19%, 24%);
+--dark-blue: hsl(218, 23%, 16%);
+
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1440px;
+    min-width: 1440px;
+    height: 900px;
+    background: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background: var(--dark-gray-blue);
+    width: 600px;
+    height: 335px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    row-gap: 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    align-items: center;
+}
+
+.card__title{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 6px;
+}
+
+.card__subtitle{
+    color: var(--light-cyan);
+    font-size: 28px;
+    max-width: 25ch;
+    margin-bottom: 1rem;
+}
+
+.dice_img{
+    position: absolute;  
+    background: var(--neon-green);
+    height: 65px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+.dice_img:hover{
+    box-shadow: 0px 0px 50px 5px var(--neon-green);
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background: var(--dark-blue);
+    }
+    
+    .container{
+        max-width: 375px;
+        min-width: 375px;
+        height: 100vh;
+        padding: 0 1em;
+    }
+    
+    .card{
+        width: 375px;
+        height: 300px;
+        padding: 2.5em 1em;
+        row-gap: 1rem;
+    }
+    
+    .card__title{
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+    
+    .card__subtitle{
+        font-size: 22px;
+        max-width: 19ch;
+        margin-bottom: 0.5rem;
+    }
+    
+    .dice_img{
+        height: 60px;
+    }
+}
